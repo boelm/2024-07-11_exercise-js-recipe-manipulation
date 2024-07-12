@@ -12,4 +12,13 @@ headerRef.style.justifyContent = 'start';
 headerRef.style.borderColor = 'lightgray';
 
 //4. The recipe name is wrong, change it to the correct one.
+const titleRef = document.querySelector('#recipe-name');
+titleRef.innerHTML = 'Frozen Cheesecake';
 
+//5. The clock icon beneath the recipe name has disappeared and been replaced by a text instead. 
+//This can be fixed by adding a class to that element.
+const timeContainerRef = document.querySelector('.time-container');
+//TOODO: add class
+//timeContainerRef
+
+//material-icons

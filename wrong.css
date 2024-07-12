@@ -40,7 +40,8 @@ header a:hover {
 }
 
 header a.wrong-link {
-  color: red;
+   /* color: red; Did not like the red color */
+   color: rgba(199, 88, 28, 0.913);
 }
 
 img {
