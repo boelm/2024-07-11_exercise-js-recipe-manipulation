@@ -41,24 +41,44 @@ imageSettings.cssWidth = 'Hur gör man?';
 // console.log(imgRef.style);
 // console.log(getComputedStyle(imgRef));
 // console.log(imgRef.getAttribute('style','height'));
+//console.log(imgRef.getAttribute('style'));
 // console.log(imgRef.style.height);
 imageSettings.height = 2;
-imageSettings.cssHeight = 'Hur gör man?';
-imageSettings.cssWidth = 'Hur gör man?';
+imageSettings.cssHeight = 'Hur gör man?->är överkurs';
+imageSettings.cssWidth = 'Hur gör man?->är överkurs';
 
 console.log(`%c5: image-settings:`,'color:orange');
 console.log(imageSettings);
+
 
 // 6. How many ingredients has the paste?
 const pasteIngredientsRef = document.querySelector('.ingredients-list-paste');
 console.log('6. Paste ingredients: ', pasteIngredientsRef.childElementCount);
 
 // 7. Which is the forth element in the list containing the ingredients for the paste?
-console.log(`Den 4:e ingrediensen är: `, pasteIngredientsRef.children[3].innerHTML);
+console.log(`7. Den 4:e ingrediensen är: `, pasteIngredientsRef.children[3].innerHTML);
 
 // 8. Create an an array of objects from the instructions. Each element in the array should be an object that looks like this:
 // {
 //   order: number;
 //   text: instruction;
 // }
+const instructions = [];
+const instructionsOlRef = document.querySelector('.instructions-list').children;
+//console.log(instructionsOlRef);
+const instructionsLiRefs = instructionsOlRef.children;
+
+let liCount = 1;
+for (item of instructionsOlRef){
+    console.log(item.innerHTML);
+    instructions.push(
+        {
+            order: liCount,
+            text: item.innerHTML
+        }
+    );
+    liCount++;
+}
+
+console.log('8. instruktionerna i en objekt-array: ',instructions);
 
