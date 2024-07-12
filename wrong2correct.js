@@ -2,7 +2,7 @@
 //Getting data from the DOM.
 
 // 1. What is the name of the recipe?
-let nameRef = document.querySelector('#recipe-name');
+let nameRef = document.querySelector("#recipe-name");
 let nameText = nameRef.innerHTML;
 console.log(`1. Name of recipe: ${nameText}`);
 
@@ -11,13 +11,17 @@ let tagName = nameRef.tagName;
 console.log(`2. HTML tag used: ${tagName}`);
 
 // 3. What is the font size of the paragraph tag with the class "description".
-let pDescriptionRef = document.querySelector('.description');
+let pDescriptionRef = document.querySelector(".description");
 //pDescriptionRef.style.fontSize = '3px';
-console.log('%c3. font-size (in css set to 16px for *) ','color:orange',pDescriptionRef.style.fontSize);
+console.log(
+  "%c3. font-size (in css set to 16px for *) ",
+  "color:orange",
+  pDescriptionRef.style.fontSize
+);
 
 // 4. What is the value of the alt atrribute on the image?
-let imgRef = document.querySelector('img');
-console.log(`Value of alt attribute on image: ${imgRef.alt}`);
+let imgRef = document.querySelector("img");
+console.log(`4. Value of alt attribute on image: ${imgRef.alt}`);
 let altAttributes = imgRef.attributes;
 
 // 5. What is the dimensions and the url of the image? Create an object that looks like this, and log it to the console:
@@ -26,13 +30,35 @@ let altAttributes = imgRef.attributes;
 //   height: number,
 //   width: number,
 // }
+const imageSettings = {};
+console.log(imgRef);
+imageSettings.url = imgRef.src;
+imageSettings.height = imgRef.height;
+imageSettings.width = imgRef.width;
+imageSettings.cssHeight = 'Hur gör man?';
+imageSettings.cssWidth = 'Hur gör man?';
 
+// console.log(imgRef.style);
+// console.log(getComputedStyle(imgRef));
+// console.log(imgRef.getAttribute('style','height'));
+// console.log(imgRef.style.height);
+imageSettings.height = 2;
+imageSettings.cssHeight = 'Hur gör man?';
+imageSettings.cssWidth = 'Hur gör man?';
 
+console.log(`%c5: image-settings:`,'color:orange');
+console.log(imageSettings);
 
 // 6. How many ingredients has the paste?
+const pasteIngredientsRef = document.querySelector('.ingredients-list-paste');
+console.log('6. Paste ingredients: ', pasteIngredientsRef.childElementCount);
+
 // 7. Which is the forth element in the list containing the ingredients for the paste?
+console.log(`Den 4:e ingrediensen är: `, pasteIngredientsRef.children[3].innerHTML);
+
 // 8. Create an an array of objects from the instructions. Each element in the array should be an object that looks like this:
 // {
 //   order: number;
 //   text: instruction;
 // }
+
