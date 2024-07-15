@@ -21,3 +21,22 @@ const timeContainerRef = document.querySelector('.time-container');
 //console.log(timeContainerRef);
 //console.log(timeContainerRef.firstChild);
 timeContainerRef.firstChild.classList.add('material-icons');
+
+//6. The estimated time of the recipe is also incorrect. Change it to the correct time estimation.
+const timeEstimationRef = document.querySelector('.time');
+timeEstimationRef.innerHTML = '60+';
+
+//7. The src path to the image is wrong, or atleast it's showing the wrong image. 
+//Change it to the correct one. The available images can be found in the assets folder.
+const imgRef = document.querySelector('.image-container > img');
+//console.log(imgRef);
+imgRef.setAttribute('src','assets/frozen-cheesecake-slice.jpg');
+
+//8. The background color of the ingredients list container is wrong. Fix it.
+const ingridientsRef = document.querySelector('.ingredients-container');
+console.log(ingridientsRef);
+ingridientsRef.style.backgroundColor = 'rgb(249,249,249)';
+
+//. The ingredients are divided in to two parts, one for the bottom and one for the paste. 
+//In the list of the ingredients to the bottom, there is a text instead of two list items. 
+//Remove the text and add those two list items.
